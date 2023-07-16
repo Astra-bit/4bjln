@@ -1,0 +1,1991 @@
+activity_view_batches.xml
+
+ 
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+
+    tools:context=".ViewBatchesActivity">
+
+ 
+
+ 
+
+    <RadioGroup
+
+        android:id="@+id/filter_radio_group"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content">
+
+ 
+
+        <RadioButton
+
+            android:id="@+id/all_radio_button"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:text="全部记录" />
+
+ 
+
+        <RadioButton
+
+            android:id="@+id/expired_radio_button"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:text="已过期记录" />
+
+ 
+
+        <RadioButton
+
+            android:id="@+id/expiring_radio_button"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:text="临期记录(3个月内)" />
+
+ 
+
+    </RadioGroup>
+
+ 
+
+ 
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+
+ 
+
+        <Button
+
+            android:id="@+id/btn_export"
+
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+
+            android:text="导出Excel" />
+
+ 
+
+        <Button
+
+            android:id="@+id/btn_share"
+
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+
+            android:text="分享 Excel" />
+
+ 
+
+        <Button
+
+            android:id="@+id/btn_delete_all"
+
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+
+            android:text="删除所有" />
+
+ 
+
+        <Button
+
+            android:id="@+id/btn_import"
+
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+
+            android:text="导入 Excel" />
+
+    </LinearLayout>
+
+ 
+
+ 
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/recycler_view"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent" />
+
+ 
+
+ 
+
+</LinearLayout>
+
+ 
+
+ 
+
+product_batch_list_item.xml
+
+ 
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+
+    android:orientation="horizontal"
+
+    android:background="@drawable/item_border"
+
+    android:gravity="center_vertical">
+
+ 
+
+    <LinearLayout
+
+        android:layout_width="326dp"
+
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+ 
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+ 
+
+            <TextView
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:text="条码：" />
+
+ 
+
+            <TextView
+
+                android:id="@+id/tv_barcode"
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:text="条形码" />
+
+ 
+
+        </LinearLayout>
+
+ 
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+ 
+
+            <TextView
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:text="商品名称：" />
+
+ 
+
+            <TextView
+
+                android:id="@+id/tv_product_name"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:text="产品名称" />
+
+ 
+
+        </LinearLayout>
+
+ 
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+ 
+
+            <TextView
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:text="生产日期：" />
+
+ 
+
+            <TextView
+
+                android:id="@+id/tv_manufacture_date"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:text="生产日期" />
+
+ 
+
+        </LinearLayout>
+
+ 
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+ 
+
+            <TextView
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:text="保质期：" />
+
+ 
+
+            <TextView
+
+                android:id="@+id/tv_shelf_life"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:text="保质期" />
+
+ 
+
+        </LinearLayout>
+
+ 
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+ 
+
+            <TextView
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:text="到期日期：" />
+
+ 
+
+            <TextView
+
+                android:id="@+id/tv_expiration_date"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:text="到期日期" />
+
+ 
+
+        </LinearLayout>
+
+ 
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+ 
+
+            <TextView
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:text="退货属性：" />
+
+ 
+
+            <TextView
+
+                android:id="@+id/tv_returnable"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:text="是否可退货" />
+
+ 
+
+        </LinearLayout>
+
+ 
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+ 
+
+            <TextView
+
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:text="数量：" />
+
+ 
+
+            <TextView
+
+                android:id="@+id/tv_quantity"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:text="数量" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+ 
+
+    <Button
+
+        android:id="@+id/btn_delete"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_weight="1"
+
+        android:gravity="center"
+
+        android:text="删除" />
+
+</LinearLayout>
+
+ 
+
+ 
+
+ViewBatchesActivity.java
+
+ 
+
+package com.example.hxhaa;
+
+ 
+
+ 
+
+import android.annotation.SuppressLint;
+
+import android.content.Intent;
+
+import android.content.pm.PackageManager;
+
+import android.net.Uri;
+
+import android.os.AsyncTask;
+
+import android.os.Build;
+
+import android.os.Bundle;
+
+import android.os.Environment;
+
+import android.view.View;
+
+import android.widget.Button;
+
+import android.widget.RadioGroup;
+
+import android.widget.Toast;
+
+ 
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import androidx.core.app.ActivityCompat;
+
+import androidx.core.content.ContextCompat;
+
+import androidx.core.content.FileProvider;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+
+import androidx.recyclerview.widget.RecyclerView;
+
+ 
+
+import org.apache.poi.ss.usermodel.Cell;
+
+import org.apache.poi.ss.usermodel.Row;
+
+import org.apache.poi.ss.usermodel.Sheet;
+
+import org.apache.poi.ss.usermodel.Workbook;
+
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+ 
+
+import java.io.File;
+
+import java.io.FileOutputStream;
+
+import java.io.IOException;
+
+import java.util.ArrayList;
+
+import java.util.List;
+
+ 
+
+import android.Manifest;
+
+ 
+
+ 
+
+public class ViewBatchesActivity extends AppCompatActivity {
+
+ 
+
+    private static final int PERMISSION_REQUEST_STORAGE = 1;
+
+ 
+
+    private ProductBatchDao productBatchDao;
+
+ 
+
+    private List<ProductBatch> productBatchList;
+
+ 
+
+    private RecyclerView recyclerView;
+
+ 
+
+    private ProductBatchRecyclerViewAdapter adapter;
+
+ 
+
+    private Button btnExport;
+
+ 
+
+    private Button btnShare;
+
+ 
+
+    private Button btnDeleteAll;
+
+ 
+
+    // 声明一个 RadioGroup 对象
+
+ 
+
+    private RadioGroup filterRadioGroup;
+
+ 
+
+ 
+
+    @SuppressLint("StaticFieldLeak")
+
+    @Override
+
+    protected void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_view_batches);
+
+ 
+
+        // 初始化 productBatchList 变量
+
+        productBatchList = new ArrayList<>();
+
+ 
+
+        AppDatabase db = AppDatabase.getDatabase(this);
+
+        productBatchDao = db.productBatchDao();
+
+ 
+
+        recyclerView = findViewById(R.id.recycler_view);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        adapter = new ProductBatchRecyclerViewAdapter(this);
+
+        recyclerView.setAdapter(adapter);
+
+ 
+
+        btnExport = findViewById(R.id.btn_export);
+
+        btnDeleteAll = findViewById(R.id.btn_delete_all);
+
+ 
+
+        // 初始化 RadioGroup 对象
+
+        filterRadioGroup = findViewById(R.id.filter_radio_group);
+
+ 
+
+        btnExport.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+
+            public void onClick(View v) {
+
+                // 调用 ExportRecordsTask 来执行后台任务
+
+                new ExportRecordsTask().execute();
+
+            }
+
+        });
+
+ 
+
+        // 在 ViewBatchesActivity.java 中初始化分享按钮并设置其点击监听器
+
+        btnShare = findViewById(R.id.btn_share);
+
+        btnShare.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+
+            public void onClick(View v) {
+
+                // 调用 ShareRecordsToExcel 来执行后台任务
+
+                new ShareRecordsExcel().execute();
+
+            }
+
+        });
+
+ 
+
+        btnDeleteAll.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+
+            public void onClick(View v) {
+
+                // 调用一个方法来删除所有记录
+
+                deleteAllRecords();
+
+            }
+
+        });
+
+ 
+
+        // 在 onCreate 方法中设置 RadioGroup 的监听器
+
+        filterRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
+            @Override
+
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                // 根据不同的选项，调用不同的 AsyncTask 来执行后台查询
+
+                if (checkedId == R.id.all_radio_button) {
+
+                    // 查询所有记录
+
+                    new QueryAllRecordsTask().execute();
+
+                } else if (checkedId == R.id.expired_radio_button) {
+
+                    // 查询已过期记录
+
+                    new QueryExpiredRecordsTask().execute();
+
+                } else if (checkedId == R.id.expiring_radio_button) {
+
+                    // 查询临期记录
+
+                    new QueryExpiringRecordsTask().execute();
+
+                }
+
+            }
+
+        });
+
+ 
+
+ 
+
+        // 在这里调用 QueryAllRecordsTask 来执行后台任务，显示默认的所有记录
+
+        new QueryAllRecordsTask().execute();
+
+ 
+
+    }
+
+ 
+
+    // 定义一个方法来导出记录成 Excel 文件
+
+ 
+
+    private void exportRecordsToExcel(List<ProductBatch> productBatchList) {
+
+        // 检查存储权限
+
+        checkAndRequestStoragePermission();
+
+        // 创建一个 Excel 工作簿对象
+
+        Workbook workbook = new XSSFWorkbook();
+
+        // 创建一个工作表对象
+
+        Sheet sheet = workbook.createSheet("Product Batches");
+
+        // 创建第一行，作为标题行
+
+        Row titleRow = sheet.createRow(0);
+
+        // 创建单元格并设置标题内容
+
+        Cell cellBarcode = titleRow.createCell(0);
+
+        cellBarcode.setCellValue("条形码");
+
+        Cell cellProductName = titleRow.createCell(1);
+
+        cellProductName.setCellValue("产品名称");
+
+        Cell cellManufactureDate = titleRow.createCell(2);
+
+        cellManufactureDate.setCellValue("生产日期");
+
+        Cell cellShelfLife = titleRow.createCell(3);
+
+        cellShelfLife.setCellValue("保质期");
+
+        Cell cellExpirationDate = titleRow.createCell(4);
+
+        cellExpirationDate.setCellValue("到期日期");
+
+        Cell cellReturnable = titleRow.createCell(5);
+
+        cellReturnable.setCellValue("退货属性");
+
+        Cell cellQuantity = titleRow.createCell(6);
+
+        cellQuantity.setCellValue("数量");
+
+ 
+
+        // 遍历产品批次列表，创建数据行并填充数据
+
+        for (int i = 0; i < productBatchList.size(); i++) {
+
+            ProductBatch productBatch = productBatchList.get(i);
+
+ 
+
+            // 创建一行，索引从 1 开始
+
+            Row row = sheet.createRow(i + 1);
+
+            // 创建单元格并设置数据内容
+
+            Cell barcodeCell = row.createCell(0);
+
+            barcodeCell.setCellValue(productBatch.getBarcode());
+
+            Cell productNameCell = row.createCell(1);
+
+            productNameCell.setCellValue(productBatch.getProductName());
+
+            Cell manufactureDateCell = row.createCell(2);
+
+            manufactureDateCell.setCellValue(productBatch.getManufactureDate());
+
+            Cell shelfLifeCell = row.createCell(3);
+
+            shelfLifeCell.setCellValue(productBatch.getShelfLife() + productBatch.getShelfLifeUnit());
+
+            Cell expirationDateCell = row.createCell(4);
+
+            expirationDateCell.setCellValue(productBatch.getExpirationDate());
+
+ 
+
+            Cell returnableCell = row.createCell(5);
+
+            returnableCell.setCellValue(productBatch.getReturnable());
+
+            Cell quantityCell = row.createCell(6);
+
+            quantityCell.setCellValue(productBatch.getQuantity());
+
+ 
+
+ 
+
+        }
+
+ 
+
+        // 创建一个文件对象，指定输出路径和文件名
+
+        File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "product_batches.xlsx");
+
+ 
+
+        try {
+
+            // 创建一个文件输出流对象，将工作簿写入文件中
+
+            FileOutputStream fileOutputStream = new FileOutputStream(file);
+
+            workbook.write(fileOutputStream);
+
+ 
+
+            // 关闭工作簿和文件输出流对象
+
+            workbook.close();
+
+            fileOutputStream.close();
+
+ 
+
+            // 显示导出成功的提示信息
+
+            Toast.makeText(this, "导出成功，文件保存在" + file.getAbsolutePath(), Toast.LENGTH_LONG).show();
+
+ 
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+
+ 
+
+            // 显示导出失败的提示信息
+
+            Toast.makeText(this, "导出失败：" + e.getMessage(), Toast.LENGTH_LONG).show();
+
+ 
+
+        }
+
+    }
+
+ 
+
+    // 定义一个方法来分享记录成 Excel 文件
+
+ 
+
+    private void shareRecordsToExcel(List<ProductBatch> productBatchList) {
+
+        // 检查存储权限
+
+        checkAndRequestStoragePermission();
+
+        // 创建一个 Excel 工作簿对象
+
+        Workbook workbook = new XSSFWorkbook();
+
+        // 创建一个工作表对象
+
+        Sheet sheet = workbook.createSheet("Product Batches");
+
+        // 创建第一行，作为标题行
+
+        Row titleRow = sheet.createRow(0);
+
+        // 创建单元格并设置标题内容
+
+        Cell cellBarcode = titleRow.createCell(0);
+
+        cellBarcode.setCellValue("条形码");
+
+        Cell cellProductName = titleRow.createCell(1);
+
+        cellProductName.setCellValue("产品名称");
+
+        Cell cellManufactureDate = titleRow.createCell(2);
+
+        cellManufactureDate.setCellValue("生产日期");
+
+        Cell cellShelfLife = titleRow.createCell(3);
+
+        cellShelfLife.setCellValue("保质期");
+
+        Cell cellExpirationDate = titleRow.createCell(4);
+
+        cellExpirationDate.setCellValue("到期日期");
+
+        Cell cellReturnable = titleRow.createCell(5);
+
+        cellReturnable.setCellValue("退货属性");
+
+        Cell cellQuantity = titleRow.createCell(6);
+
+        cellQuantity.setCellValue("数量");
+
+ 
+
+        // 遍历产品批次列表，创建数据行并填充数据
+
+        for (int i = 0; i < productBatchList.size(); i++) {
+
+            ProductBatch productBatch = productBatchList.get(i);
+
+ 
+
+            // 创建一行，索引从 1 开始
+
+            Row row = sheet.createRow(i + 1);
+
+            // 创建单元格并设置数据内容
+
+            Cell barcodeCell = row.createCell(0);
+
+            barcodeCell.setCellValue(productBatch.getBarcode());
+
+            Cell productNameCell = row.createCell(1);
+
+            productNameCell.setCellValue(productBatch.getProductName());
+
+            Cell manufactureDateCell = row.createCell(2);
+
+            manufactureDateCell.setCellValue(productBatch.getManufactureDate());
+
+            Cell shelfLifeCell = row.createCell(3);
+
+            shelfLifeCell.setCellValue(productBatch.getShelfLife() + productBatch.getShelfLifeUnit());
+
+            Cell expirationDateCell = row.createCell(4);
+
+            expirationDateCell.setCellValue(productBatch.getExpirationDate());
+
+ 
+
+            Cell returnableCell = row.createCell(5);
+
+            returnableCell.setCellValue(productBatch.getReturnable());
+
+            Cell quantityCell = row.createCell(6);
+
+            quantityCell.setCellValue(productBatch.getQuantity());
+
+        }
+
+ 
+
+        // 创建一个文件对象，指定输出路径和文件名
+
+        File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "product_batches.xlsx");
+
+ 
+
+        try {
+
+            // 创建一个文件输出流对象，将工作簿写入文件中
+
+            FileOutputStream fileOutputStream = new FileOutputStream(file);
+
+            workbook.write(fileOutputStream);
+
+ 
+
+            // 关闭工作簿和文件输出流对象
+
+            workbook.close();
+
+            fileOutputStream.close();
+
+ 
+
+            // 显示导出成功的提示信息
+
+            // Toast.makeText(this, "导出成功，文件保存在" + file.getAbsolutePath(), Toast.LENGTH_LONG).show();
+
+            // 获取文件的 content:// URI
+
+ 
+
+            Uri uri = FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".provider", file);
+
+            // 创建一个意图对象，设置动作为发送文件
+
+            Intent intent = new Intent(Intent.ACTION_SEND);
+
+            // 设置文件的类型为 Excel
+
+            intent.setType("application/vnd.ms-excel");
+
+            // 设置文件的 Uri 作为附件
+
+            intent.putExtra(Intent.EXTRA_STREAM, uri);
+
+            // 启动意图，弹出选择应用的对话框
+
+            startActivity(Intent.createChooser(intent, "选择应用"));
+
+ 
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+
+ 
+
+            // 显示导出失败的提示信息
+
+            Toast.makeText(this, "导出失败：" + e.getMessage(), Toast.LENGTH_LONG).show();
+
+        }
+
+    }
+
+ 
+
+ 
+
+    // 定义一个方法来删除所有记录
+
+ 
+
+    @SuppressLint("StaticFieldLeak")
+
+    private void deleteAllRecords() {
+
+        // 使用 AsyncTask 来执行异步删除
+
+        new AsyncTask<Void, Void, Void>() {
+
+            @Override
+
+            protected Void doInBackground(Void... voids) {
+
+                // 在后台线程中删除数据库中的所有记录
+
+                productBatchDao.deleteAllProductBatches();
+
+                return null;
+
+            }
+
+ 
+
+            @Override
+
+            protected void onPostExecute(Void aVoid) {
+
+                // 在主线程中更新 UI ，显示删除成功的提示信息
+
+                Toast.makeText(ViewBatchesActivity.this, "删除成功", Toast.LENGTH_SHORT).show();
+
+                // 清空适配器的数据源并刷新列表
+
+                productBatchList.clear();
+
+                adapter.notifyDataSetChanged();
+
+            }
+
+        }.execute();
+
+    }
+
+ 
+
+    // 在 ViewBatchesActivity 中定义一个 checkAndRequestStoragePermission 方法
+
+ 
+
+    private void checkAndRequestStoragePermission() {
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+
+ 
+
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
+
+                    != PackageManager.PERMISSION_GRANTED ||
+
+                    ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+
+                            != PackageManager.PERMISSION_GRANTED) {
+
+                ActivityCompat.requestPermissions(this,
+
+                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE},
+
+                        PERMISSION_REQUEST_STORAGE);
+
+            }
+
+        }
+
+    }
+
+ 
+
+    // 定义一个 ExportRecordsTask 类来执行后台任务
+
+ 
+
+    private class ExportRecordsTask extends AsyncTask<Void, Void, List<ProductBatch>> {
+
+        @Override
+
+        protected List<ProductBatch> doInBackground(Void... voids) {
+
+            // 在后台线程中执行数据库操作
+
+            return productBatchDao.getAllProductBatches();
+
+        }
+
+ 
+
+        @Override
+
+        protected void onPostExecute(List<ProductBatch> productBatches) {
+
+            // 在主线程中更新 UI
+
+            exportRecordsToExcel(productBatches);
+
+        }
+
+    }
+
+ 
+
+    // 定义一个 ShareRecordsToExcel 类来执行后台任务
+
+ 
+
+    private class ShareRecordsExcel extends AsyncTask<Void, Void, List<ProductBatch>> {
+
+        @Override
+
+        protected List<ProductBatch> doInBackground(Void... voids) {
+
+            // 在后台线程中执行数据库操作
+
+            return productBatchDao.getAllProductBatches();
+
+        }
+
+ 
+
+        @Override
+
+        protected void onPostExecute(List<ProductBatch> productBatches) {
+
+            // 在主线程中更新 UI
+
+            shareRecordsToExcel(productBatches);
+
+        }
+
+    }
+
+ 
+
+    // 定义一个 QueryAllRecordsTask 类来执行后台查询
+
+ 
+
+    @SuppressLint("StaticFieldLeak")
+
+    private class QueryAllRecordsTask extends AsyncTask<Void, Void, List<ProductBatch>> {
+
+        @Override
+
+        protected List<ProductBatch> doInBackground(Void... voids) {
+
+            // 在后台线程中查询数据库，获取所有记录
+
+            return productBatchDao.getAllProductBatches();
+
+        }
+
+ 
+
+        @Override
+
+        protected void onPostExecute(List<ProductBatch> productBatches) {
+
+            // 在主线程中更新 UI ，显示查询结果
+
+            productBatchList = productBatches;
+
+            adapter.updateDataSource(productBatchList);
+
+        }
+
+    }
+
+ 
+
+    // 定义一个 QueryExpiredRecordsTask 类来执行后台查询
+
+ 
+
+    @SuppressLint("StaticFieldLeak")
+
+    private class QueryExpiredRecordsTask extends AsyncTask<Void, Void, List<ProductBatch>> {
+
+        @Override
+
+        protected List<ProductBatch> doInBackground(Void... voids) {
+
+            // 在后台线程中查询数据库，获取已过期记录
+
+            return productBatchDao.getExpiredProductBatches();
+
+        }
+
+ 
+
+        @Override
+
+        protected void onPostExecute(List<ProductBatch> productBatches) {
+
+            // 在主线程中更新 UI ，显示查询结果
+
+            productBatchList = productBatches;
+
+            adapter.updateDataSource(productBatchList);
+
+        }
+
+    }
+
+ 
+
+    // 定义一个 QueryExpiringRecordsTask 类来执行后台查询
+
+ 
+
+    @SuppressLint("StaticFieldLeak")
+
+    private class QueryExpiringRecordsTask extends AsyncTask<Void, Void, List<ProductBatch>> {
+
+        @Override
+
+        protected List<ProductBatch> doInBackground(Void... voids) {
+
+            // 在后台线程中查询数据库，获取临期记录
+
+            return productBatchDao.getExpiringProductBatches();
+
+        }
+
+ 
+
+        @Override
+
+        protected void onPostExecute(List<ProductBatch> productBatches) {
+
+            // 在主线程中更新 UI ，显示查询结果
+
+            productBatchList = productBatches;
+
+            adapter.updateDataSource(productBatchList);
+
+        }
+
+    }
+
+ 
+
+}
+
+ 
+
+ 
+
+ProductBatch.java
+
+ 
+
+package com.example.hxhaa;
+
+ 
+
+import androidx.room.ColumnInfo;
+
+import androidx.room.Entity;
+
+import androidx.room.PrimaryKey;
+
+ 
+
+@Entity(tableName = "product_batches")
+
+public class ProductBatch {
+
+    @PrimaryKey(autoGenerate = true)
+
+    public int id;
+
+ 
+
+    @ColumnInfo(name = "barcode")
+
+    private String barcode;
+
+ 
+
+    @ColumnInfo(name = "product_name")
+
+    private String productName;
+
+ 
+
+    @ColumnInfo(name = "manufacture_date")
+
+    private String manufactureDate;
+
+ 
+
+    @ColumnInfo(name = "shelf_life")
+
+    private String shelfLife;
+
+ 
+
+    @ColumnInfo(name = "shelf_life_unit")
+
+    private String shelfLifeUnit;
+
+ 
+
+    @ColumnInfo(name = "expiration_date")
+
+    private String expirationDate;
+
+ 
+
+    @ColumnInfo(name = "returnable")
+
+    private String returnable;
+
+ 
+
+    @ColumnInfo(name = "quantity")
+
+    private String quantity;
+
+ 
+
+    public ProductBatch(String barcode, String productName, String manufactureDate, String shelfLife, String shelfLifeUnit, String expirationDate, String returnable, String quantity) {
+
+        this.barcode = barcode;
+
+        this.productName = productName;
+
+        this.manufactureDate = manufactureDate;
+
+        this.shelfLife = shelfLife;
+
+        this.shelfLifeUnit = shelfLifeUnit;
+
+        this.expirationDate = expirationDate;
+
+        this.returnable = returnable;
+
+        this.quantity = quantity;
+
+    }
+
+ 
+
+    public int getId() {
+
+        return id;
+
+    }
+
+ 
+
+    public void setId(int id) {
+
+        this.id = id;
+
+    }
+
+ 
+
+    public String getBarcode() {
+
+        return barcode;
+
+    }
+
+ 
+
+    public void setBarcode(String barcode) {
+
+        this.barcode = barcode;
+
+    }
+
+ 
+
+    public String getProductName() {
+
+        return productName;
+
+    }
+
+ 
+
+    public void setProductName(String productName) {
+
+        this.productName = productName;
+
+    }
+
+ 
+
+    public String getManufactureDate() {
+
+        return manufactureDate;
+
+    }
+
+ 
+
+    public void setManufactureDate(String manufactureDate) {
+
+        this.manufactureDate = manufactureDate;
+
+    }
+
+ 
+
+    public String getShelfLife() {
+
+        return shelfLife;
+
+    }
+
+ 
+
+    public void setShelfLife(String shelfLife) {
+
+        this.shelfLife = shelfLife;
+
+    }
+
+ 
+
+    public String getShelfLifeUnit() {
+
+        return shelfLifeUnit;
+
+    }
+
+ 
+
+    public void setShelfLifeUnit(String shelfLifeUnit) {
+
+        this.shelfLifeUnit = shelfLifeUnit;
+
+    }
+
+ 
+
+    public String getExpirationDate() {
+
+        return expirationDate;
+
+    }
+
+ 
+
+    public void setExpirationDate(String expirationDate) {
+
+        this.expirationDate = expirationDate;
+
+    }
+
+ 
+
+    public String getReturnable() {
+
+        return returnable;
+
+    }
+
+ 
+
+    public void setReturnable(String expirationDate) {
+
+        this.returnable = expirationDate;
+
+    }
+
+ 
+
+    public String getQuantity() {
+
+        return quantity;
+
+    }
+
+ 
+
+    public void setQuantity(String quantity) {
+
+        this.quantity = quantity;
+
+    }
+
+}
+
+ 
+
+ 
+
+ProductBatchDao.java
+
+ 
+
+package com.example.hxhaa;
+
+ 
+
+import androidx.room.Dao;
+
+import androidx.room.Delete;
+
+import androidx.room.Insert;
+
+import androidx.room.OnConflictStrategy;
+
+import androidx.room.Query;
+
+ 
+
+import java.util.List;
+
+ 
+
+@Dao
+
+public interface ProductBatchDao {
+
+ 
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+
+    void insertProductBatch(ProductBatch productBatch);
+
+ 
+
+    @Query("SELECT * FROM product_batches")
+
+    List<ProductBatch> getAllProductBatches();
+
+ 
+
+    // 在ProductBatchDao中定义一个deleteAllProductBatches方法
+
+ 
+
+    @Query("DELETE FROM product_batches")
+
+    void deleteAllProductBatches();
+
+ 
+
+    @Delete
+
+    void deleteProductBatch(ProductBatch productBatch);
+
+ 
+
+ 
+
+ 
+
+    // 在 ProductBatchDao 中定义一个 getExpiredProductBatches 方法
+
+ 
+
+    @Query("SELECT * FROM product_batches WHERE expiration_date < date('now')")
+
+    List<ProductBatch> getExpiredProductBatches();
+
+ 
+
+    // 在 ProductBatchDao 中定义一个 getExpiringProductBatches 方法
+
+ 
+
+    @Query("SELECT * FROM product_batches WHERE expiration_date BETWEEN date('now') AND date('now', '+3 months')")
+
+    List<ProductBatch> getExpiringProductBatches();
+
+ 
+
+}
+
+ 
+
+ 
+
+ProductBatchRecyclerViewAdapter.java
+
+ 
+
+package com.example.hxhaa;
+
+ 
+
+import android.annotation.SuppressLint;
+
+import android.content.Context;
+
+import android.os.AsyncTask;
+
+import android.view.LayoutInflater;
+
+import android.view.View;
+
+import android.view.ViewGroup;
+
+import android.widget.Button;
+
+import android.widget.TextView;
+
+import android.widget.Toast;
+
+ 
+
+import androidx.annotation.NonNull;
+
+import androidx.recyclerview.widget.RecyclerView;
+
+ 
+
+import java.util.List;
+
+ 
+
+public class ProductBatchRecyclerViewAdapter extends RecyclerView.Adapter<ProductBatchRecyclerViewAdapter.ViewHolder> {
+
+    private List<ProductBatch> productBatchList;
+
+    private Context context;
+
+    private Button btnDelete;
+
+    private ProductBatchDao productBatchDao;
+
+ 
+
+    public ProductBatchRecyclerViewAdapter(Context context) {
+
+        this.context = context;
+
+        AppDatabase db = AppDatabase.getDatabase(context);
+
+        this.productBatchDao = db.productBatchDao();
+
+    }
+
+ 
+
+    public void setProductBatchList(List<ProductBatch> productBatchList) {
+
+        this.productBatchList = productBatchList;
+
+        notifyDataSetChanged();
+
+    }
+
+ 
+
+    // 定义一个方法来更新适配器的数据源
+
+ 
+
+    public void updateDataSource(List<ProductBatch> productBatchList) {
+
+        this.productBatchList = productBatchList;
+
+        notifyDataSetChanged();
+
+    }
+
+ 
+
+    @NonNull
+
+    @Override
+
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
+        LayoutInflater inflater = LayoutInflater.from(context);
+
+        View view = inflater.inflate(R.layout.product_batch_list_item, parent, false);
+
+        return new ViewHolder(view);
+
+    }
+
+ 
+
+    @Override
+
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+
+        // 获取当前位置
+
+        int currentPosition = holder.getAdapterPosition();
+
+        // 使用当前位置来获取产品批次对象
+
+        ProductBatch productBatch = productBatchList.get(position);
+
+        holder.tvBarcode.setText(productBatch.getBarcode());
+
+        holder.tvProductName.setText(productBatch.getProductName());
+
+        holder.tvManufactureDate.setText(productBatch.getManufactureDate());
+
+        holder.tvShelfLife.setText(productBatch.getShelfLife() + productBatch.getShelfLifeUnit());
+
+        holder.tvExpirationDate.setText(productBatch.getExpirationDate());
+
+        holder.tvReturnable.setText(productBatch.getReturnable());
+
+        holder.tvQuantity.setText(productBatch.getQuantity());
+
+        // 在 onBindViewHolder 方法中设置按钮的点击监听器
+
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+
+            public void onClick(View v) {
+
+                // 调用一个方法来删除该记录
+
+                deleteRecord(productBatch);
+
+            }
+
+        });
+
+    }
+
+ 
+
+    @Override
+
+    public int getItemCount() {
+
+        if (productBatchList != null) {
+
+            return productBatchList.size();
+
+        }
+
+        return 0;
+
+    }
+
+ 
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+
+        public TextView tvBarcode;
+
+        public TextView tvProductName;
+
+        public TextView tvManufactureDate;
+
+        public TextView tvShelfLife;
+
+        public TextView tvExpirationDate;
+
+        public TextView tvReturnable;
+
+        public TextView tvQuantity;
+
+ 
+
+        public ViewHolder(View itemView) {
+
+            super(itemView);
+
+            tvBarcode = itemView.findViewById(R.id.tv_barcode);
+
+            tvProductName = itemView.findViewById(R.id.tv_product_name);
+
+            tvManufactureDate = itemView.findViewById(R.id.tv_manufacture_date);
+
+            tvShelfLife = itemView.findViewById(R.id.tv_shelf_life);
+
+            tvExpirationDate = itemView.findViewById(R.id.tv_expiration_date);
+
+            tvReturnable = itemView.findViewById(R.id.tv_returnable);
+
+            tvQuantity = itemView.findViewById(R.id.tv_quantity);
+
+            // 在ViewHolder的构造方法中初始化按钮
+
+            btnDelete = itemView.findViewById(R.id.btn_delete);
+
+        }
+
+    }
+
+ 
+
+    // 定义一个方法来删除一条记录
+
+ 
+
+    @SuppressLint("StaticFieldLeak")
+
+    private void deleteRecord(ProductBatch productBatch) {
+
+        // 使用AsyncTask来执行异步删除
+
+        new AsyncTask<ProductBatch, Void, Void>() {
+
+            @Override
+
+            protected Void doInBackground(ProductBatch... productBatches) {
+
+                // 在后台线程中删除数据库中的一条记录
+
+                ProductBatch productBatch = productBatches[0];
+
+                productBatchDao.deleteProductBatch(productBatch);
+
+                return null;
+
+            }
+
+ 
+
+            @Override
+
+            protected void onPostExecute(Void aVoid) {
+
+                // 在主线程中更新UI，显示删除成功的提示信息
+
+                Toast.makeText(context, "删除成功", Toast.LENGTH_SHORT).show();
+
+                // 从适配器的数据源中移除该记录并刷新列表
+
+                productBatchList.remove(productBatch);
+
+                notifyDataSetChanged();
+
+            }
+
+        }.execute(productBatch);
+
+    }
+
+}
+
+ 
+
+ 
+
+AppDatabase.java
+
+ 
+
+package com.example.hxhaa;
+
+ 
+
+ 
+
+import android.content.Context;
+
+ 
+
+import androidx.room.Database;
+
+import androidx.room.Room;
+
+import androidx.room.RoomDatabase;
+
+ 
+
+ 
+
+@Database(entities = {Product.class, ProductBatch.class}, version = 1, exportSchema = false)
+
+public abstract class AppDatabase extends RoomDatabase {
+
+    public abstract ProductDao productDao();
+
+    public abstract ProductBatchDao productBatchDao();
+
+ 
+
+    private static volatile AppDatabase INSTANCE;
+
+ 
+
+    public static AppDatabase getDatabase(final Context context) {
+
+        if (INSTANCE == null) {
+
+            synchronized (AppDatabase.class) {
+
+                if (INSTANCE == null) {
+
+                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
+
+                                    AppDatabase.class, "app_database")
+
+                            .fallbackToDestructiveMigration()
+
+                            .createFromAsset("database/myapp.db")
+
+                            .build();
+
+                }
+
+            }
+
+        }
+
+        return INSTANCE;
+
+    }
+
+ 
+
+}
